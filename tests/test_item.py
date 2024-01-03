@@ -2,6 +2,7 @@
 import pytest
 
 from src.item import Item
+from src.phone import Phone
 
 
 @pytest.fixture
@@ -44,4 +45,9 @@ def test_repr(item):
 
 
 def test_str(item):
-    assert str(item) == 'Смартфон'
+    assert str(item) == "Смартфон"
+
+
+def test_add(item):
+    phone = Phone("iPhone 14", 120_000, 5, 2)
+    assert phone.quantity + item.quantity == 25
