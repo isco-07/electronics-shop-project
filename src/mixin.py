@@ -9,7 +9,6 @@ class MixinLog:
     def change_lang(self):
         if self.__language == "EN":
             self.__language = "RU"
-            return self.__language
         else:
             self.__language = "EN"
-            return self.language
+        return self.__language

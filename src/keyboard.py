@@ -3,5 +3,6 @@ from src.mixin import MixinLog
 
 
 class Keyboard(Item, MixinLog):
-    def change_lang(self):
-        MixinLog.change_lang(self)
+    def __init__(self, name: str, price: float, quantity: int):
+        super().__init__(name, price, quantity)
+        MixinLog.__init__(self)
